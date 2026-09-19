@@ -1,0 +1,115 @@
+/* Blog typography — extends the main site's CSS variables */
+
+.blog-wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+}
+
+.blog-breadcrumb {
+  font-size: 0.85rem;
+  color: var(--text-soft);
+  margin-bottom: 24px;
+}
+
+.blog-breadcrumb a { color: var(--primary); text-decoration: none; }
+.blog-breadcrumb a:hover { text-decoration: underline; }
+
+.blog-meta {
+  font-size: 0.85rem;
+  color: var(--text-soft);
+  margin-bottom: 8px;
+}
+
+.blog-wrap h1 {
+  font-family: var(--font-main);
+  font-size: 2rem;
+  line-height: 1.25;
+  margin-bottom: 16px;
+  color: var(--text);
+}
+
+.blog-answer {
+  background: var(--primary-light);
+  border-left: 4px solid var(--primary);
+  border-radius: var(--radius-sm);
+  padding: 16px 20px;
+  font-size: 1.05rem;
+  margin: 20px 0 32px;
+}
+
+.blog-wrap h2 {
+  font-family: var(--font-main);
+  font-size: 1.4rem;
+  margin: 32px 0 12px;
+  color: var(--text);
+}
+
+.blog-wrap h3 {
+  font-family: var(--font-main);
+  font-size: 1.15rem;
+  margin: 24px 0 8px;
+  color: var(--text);
+}
+
+.blog-wrap p, .blog-wrap li {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text);
+  margin-bottom: 14px;
+}
+
+.blog-wrap ul, .blog-wrap ol {
+  padding-left: 22px;
+  margin-bottom: 20px;
+}
+
+.blog-cta {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin: 32px 0;
+  box-shadow: var(--shadow);
+}
+
+.blog-cta a {
+  display: inline-block;
+  margin-top: 10px;
+  background: var(--primary);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  font-family: var(--font-main);
+  font-weight: 600;
+}
+
+.blog-faq dt {
+  font-weight: 600;
+  font-family: var(--font-main);
+  margin-top: 16px;
+}
+
+.blog-faq dd {
+  margin: 6px 0 0;
+  color: var(--text-soft);
+  line-height: 1.6;
+}
+
+.blog-list-item {
+  border-bottom: 1px solid var(--border);
+  padding: 24px 0;
+}
+
+.blog-list-item h2 {
+  margin: 0 0 6px;
+  font-size: 1.3rem;
+}
+
+.blog-list-item a { color: var(--text); text-decoration: none; }
+.blog-list-item a:hover { color: var(--primary); }
+
+.blog-list-item .blog-meta { margin-bottom: 8px; }
+
+.blog-list-item p { color: var(--text-soft); margin-bottom: 0; }

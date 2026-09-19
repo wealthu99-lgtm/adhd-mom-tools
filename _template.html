@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>{{TITLE}} – ADHD Mom Tools</title>
+  <meta name="description" content="{{DESCRIPTION}}">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://adhdmomtools.netlify.app/blog/{{SLUG}}/">
+  <meta name="author" content="ADHD Mom Tools">
+
+  <meta property="og:title" content="{{TITLE}}">
+  <meta property="og:description" content="{{DESCRIPTION}}">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://adhdmomtools.netlify.app/blog/{{SLUG}}/">
+  <meta property="og:site_name" content="ADHD Mom Tools">
+  <meta property="og:image" content="https://adhdmomtools.netlify.app/images/ebook-mockup.jpg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{TITLE}}">
+  <meta name="twitter:description" content="{{DESCRIPTION}}">
+  <meta name="twitter:image" content="https://adhdmomtools.netlify.app/images/ebook-mockup.jpg">
+
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../assets/blog.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": {{TITLE_JSON}},
+    "description": {{DESCRIPTION_JSON}},
+    "author": { "@type": "Organization", "name": "ADHD Mom Tools" },
+    "publisher": { "@type": "Organization", "name": "ADHD Mom Tools" },
+    "datePublished": "{{DATE_ISO}}",
+    "dateModified": "{{DATE_ISO}}",
+    "mainEntityOfPage": "https://adhdmomtools.netlify.app/blog/{{SLUG}}/"
+  }
+  </script>
+
+  {{FAQ_JSONLD_BLOCK}}
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <span class="logo-icon">🌿</span>
+        <span class="logo-text">ADHD Mom Tools</span>
+      </a>
+      <nav class="main-nav">
+        <a href="/" class="nav-btn">Tools</a>
+        <a href="/blog/" class="nav-btn active">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="blog-wrap">
+    <p class="blog-breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / {{TITLE}}</p>
+    <p class="blog-meta">Published <time datetime="{{DATE_ISO}}">{{DATE_DISPLAY}}</time></p>
+    <h1>{{TITLE}}</h1>
+
+    <div class="blog-answer">
+      <strong>Short answer:</strong> {{SHORT_ANSWER}}
+    </div>
+
+    {{BODY_HTML}}
+
+    {{TOOL_CTA_BLOCK}}
+
+    {{FAQ_HTML_BLOCK}}
+  </main>
+
+  <footer style="text-align:center; padding: 24px; color: var(--text-soft); font-size: 0.85rem;">
+    <a href="/blog/">← Back to all posts</a>
+  </footer>
+</body>
+</html>
