@@ -1,0 +1,35 @@
+backend:
+  name: git-gateway
+  branch: main
+
+publish_mode: simple
+media_folder: "images/blog-uploads"
+public_folder: "/images/blog-uploads"
+
+collections:
+  - name: "posts"
+    label: "Blog Posts"
+    folder: "blog/posts"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    identifier_field: "title"
+    summary: "{{date}} — {{title}}"
+    sortableFields: ["date", "title"]
+    fields:
+      - { label: "Title", name: "title", widget: "string", hint: "Write it as a real question people would ask (e.g. 'Why Do I Lose Track of Time With ADHD?')" }
+      - { label: "URL Slug", name: "slug", widget: "string", hint: "Short, dash-separated, no spaces (e.g. why-i-lose-track-of-time). This becomes the page's web address." }
+      - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "SEO Description", name: "description", widget: "text", hint: "One or two plain sentences summarizing the post. Shows in Google search results." }
+      - { label: "Short Direct Answer", name: "short_answer", widget: "text", hint: "The single clearest 2-3 sentence answer to the post's question. This is the part Google and AI assistants are most likely to quote directly, so make it complete on its own." }
+      - { label: "Link to Tool Name (optional)", name: "tool_label", widget: "string", required: false, hint: "e.g. Focus Timer" }
+      - { label: "Link to Tool URL (optional)", name: "tool_link", widget: "string", required: false, hint: "e.g. /#timer" }
+      - label: "FAQ"
+        name: "faq"
+        widget: "list"
+        required: false
+        hint: "Add 2-4 short question/answer pairs. These get shown on the page and fed to AI assistants in a machine-readable format."
+        fields:
+          - { label: "Question", name: "question", widget: "string" }
+          - { label: "Answer", name: "answer", widget: "text" }
+      - { label: "Post Body", name: "body", widget: "markdown", hint: "The main content. Use the toolbar for headings and bullet lists — short paragraphs read better than long ones." }
