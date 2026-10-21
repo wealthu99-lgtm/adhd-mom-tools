@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{{HEAD}}
+</head>
+<body>
+{{HEADER}}
+<main id="main" class="blog-wrap">
+  <p class="blog-breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / {{TITLE}}</p>
+  <p class="blog-meta">Published <time datetime="{{DATE_ISO}}">{{DATE_DISPLAY}}</time></p>
+  <h1>{{TITLE}}</h1>
+
+  <div class="blog-answer"><strong>Short answer:</strong> {{SHORT_ANSWER}}</div>
+
+  {{BODY_HTML}}
+
+  {{TOOL_CTA_BLOCK}}
+
+  {{FAQ_HTML_BLOCK}}
+
+  <div class="post-share"><a class="btn btn-secondary btn-sm" href="{{PIN_URL}}" target="_blank" rel="noopener">📌 Save to Pinterest</a></div>
+
+  {{RELATED_POSTS}}
+</main>
+{{FOOTER}}
+<script src="/js/app.js" defer></script>
+</body>
+</html>
